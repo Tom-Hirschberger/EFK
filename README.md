@@ -24,7 +24,7 @@ Changes needed to get the EFK tutorial to work
 
 * `helm install fluentd bitnami/fluentd --version="2.0.1"` does not work
 * Lowest Chart Version 5.1.11 with fluentd 1.14.6 or current Chart Version 5.8.2 with fluentd 1.16.1 available in repo
-* fluentd-forwarder-cm is now splitted to fluentd-inputs.conf, fluentd-output.conf, fluentd.conf, metrics.conf
+* fluentd-forwarder-cm is now splitted to fluentd-inputs.conf, fluentd-output.conf, fluentd.conf, metrics.conf. The provided sample yaml files override at least the metrics output.
 * Even with `format json` i do get `pattern not matched` warnings and no formatted output. I think is it caused of the change of Kubernetes 1.25 and 1.26 to containerd runtime. Processing with `fluentd-config-containerd-crio-runtimes.yaml` works.
 * The elastic client of fluentd 1.16.1 is not compatible with ElasticSearch 7.17.3 neither is fluentd 1.14.6
 * As of [https://github.com/bitnami/charts/issues/10539](https://github.com/bitnami/charts/issues/10539)
